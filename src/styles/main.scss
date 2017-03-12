@@ -1,0 +1,58 @@
+md-grid-tile {
+    transition: all 400ms ease-out 50ms; 
+}
+
+md-grid-tile-header {
+    background: #000 !important;
+}
+
+md-grid-tile-footer {
+    background: #000 !important;
+}
+
+.products {
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 1%;
+}
+
+ad img {
+    width: 100%;
+}
+
+.product {
+    border: #000 solid 3px;
+}
+
+product-sort {
+    position: fixed;
+    right: 3%;
+    width: 50px;
+}
+
+product-sort .md-select-value.md-select-placeholder {
+    color: #000 !important;
+}
+
+.md-dialog-is-showing {
+    max-height: none;
+}
+
+loading-indicator {
+    position:relative;
+    top: 1em;
+}
+
+loading-indicator p {
+    z-index: 2;
+    position: relative;
+    bottom: 70px;
+    left: 17px;
+}
+
+p.endMessage {
+    background-color: #000;
+    color: #fff;
+    font-size: 25px;
+    text-align: center;
+}
