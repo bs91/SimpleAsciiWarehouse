@@ -1,7 +1,7 @@
-'use strict';
+"use strict";
 
 export interface IAdLinkService
 {
-    generateRandom: Function;
     generateAdLink: Function;
+    getPreviousAdLink: Function;
 }

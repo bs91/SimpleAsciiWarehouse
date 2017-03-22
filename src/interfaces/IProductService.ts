@@ -1,6 +1,6 @@
 import { IProduct } from "./IProduct";
 
-'use strict';
+"use strict";
 
 
 export interface IProductService 

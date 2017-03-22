@@ -4,8 +4,8 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "module": "commonjs",
-    "target": "es2015",
+    "target": "es5",
     "allowJs": true,
-    "types": ["node", "jasmine", "angular", "jquery", "angular-ui-scroll"]
+    "types": ["node", "es6-promise", "moment", "jasmine", "angular", "angular-mocks", "jquery", "protractor", "webpack", "webpack-env"]
   }
 }

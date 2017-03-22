@@ -46,7 +46,7 @@ const config = {
         extensions: [ ".ts", ".js", ".json" ]
     },
     plugins: [
-        new WebpackCleanupPlugin({ exclude: ['indexTemplate.html']}),
+        new WebpackCleanupPlugin({ exclude: ['indexTemplate.html', 'templates/**/*']}),
         new HtmlWebpackPlugin({ hash: true, filename: 'index.html', template: './static/indexTemplate.html'}),
         new webpack.optimize.CommonsChunkPlugin({
             names: ['vendor', 'manifest']

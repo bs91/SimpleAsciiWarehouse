@@ -1,19 +1,19 @@
 import { IDateModifier } from "../interfaces/IDateModifier";
 import { MomentDateModifier } from "../classes/MomentDateModifier";
 
-'use strict';
+"use strict";
 
 export let ID: string = "DateFilter";
-export let FilterFunction: Function = () => {
-    return (date: string) => {
+export let FilterFunction: Function = (): Function => {
+    return (date: string): string => {
 
-        let moment: IDateModifier = new MomentDateModifier();
-        let momentDate: Date = moment.stringToDate(date);
+        let dateModifier: IDateModifier = new MomentDateModifier();
+        let dateModifierDate: Date = dateModifier.stringToDate(date);
 
-        if(moment.isBefore(moment.subtract(moment.getCurrentDate(), 7, 'days'), momentDate)) {
-            return moment.fromNow(date);
+        if(dateModifier.isBefore(dateModifier.subtract(dateModifier.getCurrentDate(), 7, "days"), dateModifierDate)) {
+            return dateModifier.fromNow(date);
         } else {
-            return momentDate;
+            return dateModifierDate.toString();
         }
         
     }

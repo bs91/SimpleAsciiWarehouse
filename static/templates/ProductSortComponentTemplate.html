@@ -1,0 +1,6 @@
+<label>SortBy: </label>
+<select ng-init="$ctrl.selectedSort= $ctrl.sortTypes[0]" 
+    ng-options="option for option in $ctrl.sortTypes" 
+    ng-model="$ctrl.selectedSort"
+    ng-change="$ctrl.changeSort()">
+</select>

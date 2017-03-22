@@ -1,35 +1,17 @@
-import { module } from 'angular';
-import { IAdLinkService } from "../interfaces/IAdLinkService";
+import { AdComponentController } from "../controllers/AdComponentController";
 
-'use strict';
-
-export class AdComponentController implements ng.IComponentController
-{
-    static ID: string = "AdComponentController";
-
-    static $inject = ["AdLinkService"];
-    constructor(private AdLinkService: IAdLinkService) {
-        this.adLoading = true;
-        this.adLink = AdLinkService.generateAdLink();
-    }
-
-    public adLink: string;
-    public adLoading: boolean;
-    
-}
+"use strict";
 
 export class AdComponent implements ng.IComponentOptions 
 {
     static ID: string = "ad";
     public bindings: any;
     public controller: any;
-    public template: string;
+    public templateUrl: string;
     
     constructor() {
         this.bindings = {};
         this.controller = AdComponentController;
-        this.template = `
-        <img class="ad" ng-src="{{$ctrl.adLink}}"/>
-        `;
+        this.templateUrl = "/templates/AdComponentTemplate.html";
     }
 }

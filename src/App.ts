@@ -1,8 +1,8 @@
-import './styles/main.scss';
-import { IApp } from './interfaces/IApp';
-import { module } from 'angular';
+import "./styles/main.scss";
+import { IApp } from "./interfaces/IApp";
+import { module } from "angular";
 
-'use strict';
+"use strict";
 
 class App implements IApp
 {
@@ -41,18 +41,18 @@ class App implements IApp
     }
 }
 
-export let app: App = new App('asciiWarehouseApp', [
-    'ngMaterial', 
-    'ui.scroll'
-    ]);
+export let app: App = new App("asciiWarehouseApp", [
+    "ngMaterial"
+]);
 
-import './filters';
-import './controllers';
-import './services';
-import './directives';
-import './components';
+import "./filters";
+import "./services";
+import "./directives";
+import "./components";
+import "./controllers";
 
-app.config(['$qProvider', function ($qProvider: ng.IQProvider) {
+app.config(["$qProvider", ($qProvider: ng.IQProvider) => {
     $qProvider.errorOnUnhandledRejections(false);
 }]);
+
 app.run();

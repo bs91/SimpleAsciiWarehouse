@@ -1,31 +1,18 @@
-import { module } from 'angular';
+import { LoadingIndicatorComponentController } from "../controllers/LoadingIndicatorComponentController";
 
-'use strict';
-
-export class LoadingIndicatorComponentController implements ng.IComponentController
-{
-    static ID: string = "LoadingIndicatorComponentController";
-
-    constructor() {
-    }
-    
-}
+"use strict";
 
 export class LoadingIndicatorComponent implements ng.IComponentOptions 
 {
     static ID: string = "loadingIndicator";
     public bindings: any;
     public controller: any;
-    public template: string;
+    public templateUrl: string;
     
     constructor() {
         this.bindings = {};
         this.controller = LoadingIndicatorComponentController;
-        this.template = `
-            <md-progress-circular md-diameter="96" md-mode="indeterminate">
-            </md-progress-circular>
-            <p>loading...</p>
-        `;
+        this.templateUrl = "/templates/LoadingIndicatorComponentTemplate.html";
     }
 }
   
